@@ -1,0 +1,22 @@
+
+{% extends 'todo/main.html' %}
+
+{% block content %}
+
+
+
+<div class="header-bar">
+    <a href="{% url 'Task'%}">&#8592; Back</a>
+</div>
+
+<div class="card-body">
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="button" type="submit" value="Save Task">
+</form>
+</div>
+
+<a href="{% url 'Task' %}">Go Back</a>
+
+{% endblock content %}
